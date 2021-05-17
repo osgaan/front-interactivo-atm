@@ -1,0 +1,54 @@
+doctype html
+head
+  include includes/head.pug
+#container
+  #atm
+    #head
+      p ATM
+    #container_screen
+      #screen
+        #monto
+        span Arrastra Billetes y monedas para completar el monto a depositar
+      #drive-in
+    #container_btnera
+      #botonera
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+        #btn
+      #confirma
+        input#btn_confirma(type='button' onclick='ValidarYMostrar()' value='Listo!')
+    #foot
+  #dest_copy(ondrop='drop_handler(event);' ondragover='dragover_handler(event);')
+  #panel-derecho
+    #nivel Nivel 1
+    #efectivo $$ Dinero $$
+    .dinero
+      #moneda-1(draggable='true' ondragstart='dragstart_handler(event);')
+        | 100
+      #moneda-2(draggable='true' ondragstart='dragstart_handler(event);')
+        | 1
+      #moneda-3(draggable='true' ondragstart='dragstart_handler(event);')
+        | 10
+#landing
+  h2 Dep&oacute;sitos y retiros
+  h3 Instrucciones
+  h5
+    | Elige uno de los cuatro niveles. Ya en &eacute;l, arrastra y suelta los
+    | billetes y monedas para completar la cantidad de dinero solicitada. Para
+    | retirar alguna moneda o billete haz doble clic sobre ellos.
+  #row1
+    input(type='button' onclick='mostrarNivelUno()' value='Nivel 1')
+    input(type='button' onclick='mostrarNivelDos()' value='Nivel 2')
+  #row2
+    input(type='button' onclick='mostrarNivelTres()' value='Nivel 3')
+    input(type='button' onclick='mostrarNivelCuatro()' value='Nivel 4')
+

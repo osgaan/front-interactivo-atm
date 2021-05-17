@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="assets/scripts.js"> </script>
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Descomposicion aditiva de los numeros</title>
+  </head>
+</head>
+<div id="container">
+  <div id="atm">
+    <div id="head">
+      <p>ATM</p>
+    </div>
+    <div id="container_screen">
+      <div id="screen">
+        <div id="monto"></div><span>Arrastra Billetes y monedas para completar el monto a depositar</span>
+      </div>
+      <div id="drive-in"></div>
+    </div>
+    <div id="container_btnera">
+      <div id="botonera">
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+        <div id="btn"></div>
+      </div>
+      <div id="confirma">
+        <input id="btn_confirma" type="button" onclick="ValidarYMostrar()" value="Listo!">
+      </div>
+    </div>
+    <div id="foot"></div>
+  </div>
+  <div id="dest_copy" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+  <div id="panel-derecho">
+    <div id="nivel">Nivel 1</div>
+    <div id="efectivo">$$ Dinero $$</div>
+    <div class="dinero">
+      <div id="moneda-1" draggable="true" ondragstart="dragstart_handler(event);">100</div>
+      <div id="moneda-2" draggable="true" ondragstart="dragstart_handler(event);">1</div>
+      <div id="moneda-3" draggable="true" ondragstart="dragstart_handler(event);">10</div>
+    </div>
+  </div>
+</div>
+<div id="landing">
+  <h2>Dep&oacute;sitos y retiros</h2>
+  <h3>Instrucciones</h3>
+  <h5>
+    Elige uno de los cuatro niveles. Ya en &eacute;l, arrastra y suelta los
+    billetes y monedas para completar la cantidad de dinero solicitada. Para
+    retirar alguna moneda o billete haz doble clic sobre ellos.
+  </h5>
+  <div id="row1">
+    <input type="button" onclick="mostrarNivelUno()" value="Nivel 1">
+    <input type="button" onclick="mostrarNivelDos()" value="Nivel 2">
+  </div>
+  <div id="row2">
+    <input type="button" onclick="mostrarNivelTres()" value="Nivel 3">
+    <input type="button" onclick="mostrarNivelCuatro()" value="Nivel 4">
+  </div>
+</div>
